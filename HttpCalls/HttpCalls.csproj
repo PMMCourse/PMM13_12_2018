@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33DB3BB1-A8D5-4E0E-89C4-9A417B32769E}</ProjectGuid>
+    <ProjectGuid>{8B94BA8E-1F9A-4ADA-95A9-8F5D50043AC5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ExplainInterfaces</RootNamespace>
-    <AssemblyName>ExplainInterfaces</AssemblyName>
+    <RootNamespace>HttpCalls</RootNamespace>
+    <AssemblyName>HttpCalls</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,17 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileSystemStorageService.cs" />
-    <Compile Include="IDownload.cs" />
-    <Compile Include="IStorageService.cs" />
-    <Compile Include="MegaDownload.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StorageOnlineService.cs" />
-    <Compile Include="TorrentDownload.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

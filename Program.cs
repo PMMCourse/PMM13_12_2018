@@ -10,6 +10,25 @@ namespace ExplainInterfaces
     {
         static void Main(string[] args)
         {
+            IStorageService storageService = null;
+            //if(us)
+            {
+                storageService = new StorageOnlineService();
+            }
+            else
+            {
+                storageService = new FileSystemStorageService();
+            }
+            
+            DownloadInSystem(new MegaDownload(storageService));
+            DownloadInSystem(new TorrentDownload(storageService));
         }
+
+        static void DownloadInSystem(MegaDownload download)
+        {
+            download.Save();
+        }
+
+        
     }
 }
